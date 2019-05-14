@@ -1,0 +1,14 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Onedrop.Spacing: true
+    userInterface:
+      translation:
+        autoInclude:
+          'Onedrop.Spacing':
+            - 'NodeTypes/Mixin/*'
+
+Onedrop:
+  Spacing:
+    includeStyles: false

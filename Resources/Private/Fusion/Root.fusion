@@ -1,0 +1,37 @@
+# Meant to be used as a processor. Prepends a tag for spacing
+prototype(Onedrop.Spacing:SpaceWrapperBefore) < prototype(Neos.Fusion:Value) {
+    @context.before = ${q(node).property('spaceBefore')}
+
+    elementBefore = Neos.Fusion:Tag {
+        attributes.class = ${'h-space-before--' + before}
+        attributes.role = 'presentation'
+    }
+
+    value = ${before ? this.elementBefore + value : value}
+}
+
+# Meant to be used as a processor. Append a tag for spaceing
+prototype(Onedrop.Spacing:SpaceWrapperAfter) < prototype(Neos.Fusion:Value) {
+    @context {
+        after = ${q(node).property('spaceAfter')}
+    }
+
+    elementAfter = Neos.Fusion:Tag {
+        attributes.class = ${'h-space-after--' + after}
+        attributes.role = 'presentation'
+    }
+
+    value = ${after ? value + this.elementAfter: value}
+}
+
+prototype(Neos.Neos:Page) {
+    head.stylesheets {
+        space.@context.href = Neos.Fusion:Value {
+            value = Neos.Fusion:ResourceUri {
+                path = 'resource://Onedrop.Spacing/Public/Styles/Space.css'
+            }
+        }
+        space = afx`<link rel='stylesheet' type='text/css' href={href} />`
+        space.@if.stylesEnable = ${Configuration.setting('Onedrop.Spacing.includeStyles')}
+    }
+}

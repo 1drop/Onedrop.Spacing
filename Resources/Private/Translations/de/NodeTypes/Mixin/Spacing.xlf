@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Onedrop.Spacing" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.spacing" xml:space="preserve">
+                <source>Spacing</source>
+                <target>Abstand</target>
+            </trans-unit>
+            <trans-unit id="properties.spaceBefore" xml:space="preserve">
+                <source>Before Element</source>
+                <target>Vor dem Element</target>
+            </trans-unit>
+            <trans-unit id="properties.spaceAfter" xml:space="preserve">
+                <source>After Element</source>
+                <target>Nach dem Element</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

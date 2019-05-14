@@ -1,0 +1,48 @@
+'Onedrop.Spacing:Mixin.Spacing':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        spacing:
+          label: i18n
+  properties:
+    spaceBefore:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector: &spaceInspector
+          group: spacing
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: true
+            values:
+              0:
+                label: '0px'
+              1:
+                label: '10px'
+              2:
+                label: '20px'
+              3:
+                label: '30px'
+              4:
+                label: '40px'
+              5:
+                label: '50px'
+              6:
+                label: '60px'
+              7:
+                label: '70px'
+              8:
+                label: '80px'
+              9:
+                label: '90px'
+              10:
+                label: '100px'
+
+    spaceAfter:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector: *spaceInspector
